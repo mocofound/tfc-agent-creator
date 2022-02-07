@@ -1,6 +1,9 @@
-resource "tfe_organization" "test-organization" {
-  name  = "my-org-name"
-  email = "admin@company.com"
+terraform {
+  required_providers {
+    tfe = {
+      version = "~> 0.27.0"
+    }
+  }
 }
 
 resource "tfe_agent_pool" "test_agent_pool" {
