@@ -11,6 +11,11 @@ resource "tfe_agent_pool" "test_agent_pool" {
   organization = var.tfc_organization
 }
 
+resource "tfe_agent_token" "test-agent-token" {
+  agent_pool_id = tfe_agent_pool.test_agent_pool.id
+  description   = "my-agent-token-name"
+}
+
 variable "tfc_agent_pool_name" {
   type = string
 }
