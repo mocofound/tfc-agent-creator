@@ -27,3 +27,8 @@ variable "tfc_organization" {
 output "tfc_agent_pool_name" {
   value = tfe_agent_pool.test_agent_pool.name
 }
+
+output "tfc_agent_token" {
+  value = tfe_agent_token.test_agent_token.token
+}
+
