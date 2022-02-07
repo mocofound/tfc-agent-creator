@@ -29,6 +29,8 @@ output "tfc_agent_pool_name" {
 }
 
 output "tfc_agent_token" {
+  sensitive = true
   value = tfe_agent_token.test_agent_token.token
+  
 }
 
